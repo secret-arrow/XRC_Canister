@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "xrc_canister": {
+      "main": "src/xrc_canister/main.mo",
+      "type": "motoko",
+      "dependencies": ["xrc"]
+    },
+    "xrc": {
+      "type": "custom",
+      "candid": "xrc/xrc.did",
+      "wasm": "xrc/xrc.wasm.gz",
+      "remote": {
+        "candid": "xrc/xrc.did",
+        "id": {
+          "ic": "uf6dk-hyaaa-aaaaq-qaaaq-cai"
+        }
+      }
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "mops sources"
+    }
+  },
+  "version": 1
+}
